@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Moon Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css"
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars">
+      <img src="moon.png" id="moon">
+      <img src="mountains_behind.png" id="mountains_behind">
+      <h2 id="text">Moon Light</h2>
+      <a href="#" id="btn">Explore</a>
+      <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+      <h2>Web Development Practice</h2>
+      <p>Practicing web development is not just about learning new programming languages or frameworks;
+         it's about continuously refining your craft, deepening your understanding, and staying adaptable in an ever-evolving field.
+          The world of web development is fast-paced and constantly changing, with new technologies, tools,
+           and best practices emerging all the time. This makes regular practice not just beneficial,
+            but essential for anyone serious about becoming proficient in building websites and web applications.
+             The more you practice, the more you hone your skills, tackle diverse problems, and develop an intuitive understanding of how to create user-friendly,
+              efficient, and visually appealing websites. When you first start learning web development,
+               it's easy to become overwhelmed by the sheer number of concepts and technologies to master.
+                HTML, CSS, JavaScript, and beyond—each of these areas requires dedicated time and focus to understand fully.<br><br>
+                 But as you continue to practice and apply these concepts to real-world projects, you'll begin to see how all the pieces fit together.
+                  You'll start to grasp the subtle nuances of responsive design, understand how JavaScript interacts with the DOM,
+                   and learn the best practices for structuring your code to be maintainable and scalable. The act of building something from scratch,
+                    whether it's a personal project or a professional client site, is where the real learning happens. It’s in these moments—when you run into roadblocks,
+                     debug issues, and search for solutions—that you truly internalize what you’re learning. 
+                     Consistent practice allows you to experiment with new technologies and approaches without the pressure of perfection.
+                      Web development is a vast field, and no one can learn everything all at once. But by regularly taking on new challenges and trying out different frameworks,
+                       libraries, and tools, you can build a diverse skill set and become comfortable with a wide range of technologies. Whether it's learning a front-end JavaScript framework like React,
+                        diving into back-end development with Node.js, or exploring database management with SQL,
+                         each new tool you experiment with adds another layer to your knowledge and helps you stay competitive in the ever-changing job market.<br><br>
+                         Moreover, web development practice isn't limited to coding alone. It also includes improving your problem-solving skills,
+                          understanding user experience (UX) principles, and learning how to collaborate effectively with others. The more you practice,
+                           the better you’ll get at tackling complex issues, optimizing website performance, ensuring accessibility for all users, and writing clean,
+                            maintainable code. You’ll also become more adept at handling version control systems like Git,
+                             testing your code to ensure functionality and reliability, and deploying websites in different environments.<br><br>
+                             The beauty of web development lies in its versatility and creativity. There are endless opportunities to experiment with different design styles,
+                              enhance user interactions, and push the boundaries of what’s possible. As you practice, you'll begin to develop your unique approach to solving problems and creating innovative web experiences.
+                               Whether you’re building a personal portfolio site, contributing to an open-source project, or working on a full-fledged enterprise application,
+                                each project is an opportunity to expand your knowledge, learn new techniques, and challenge yourself in ways that will ultimately make you a better developer.<br><br>
+                                At the end of the day, web development is an ongoing journey. It's about constantly learning,
+                                 adapting, and practicing your skills in both structured and creative ways. With each line of code you write,
+                                  you’re not just working toward mastering specific technologies or completing a project;
+                                   you’re also building the mindset and habits necessary to thrive in a dynamic, collaborative, and fast-paced field.<br><br>
+                                    So, whether you’re just starting out or are a seasoned developer, keep practicing, stay curious,
+                                     and embrace the process of continuous improvement. The more you practice,
+                                      the better you'll become—and the more exciting the possibilities for your web development career will be.</p>
+    </div>
+
+<script>
+  let stars = document.getElementById('stars');
+  let moon = document.getElementById('moon');
+  let mountains_behind = document.getElementById('mountains_behind');
+  let text = document.getElementById('text');
+  let btn = document.getElementById('btn');
+  let mountains_front = document.getElementById('mountains_front');
+  let header = document.querySelector('header');
+
+  window.addEventListener('scroll', function () {
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+    text.style.marginRight = value * 4 + 'px';
+    text.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+    header.style.top = value * 0.5 + 'px';
+  });
+</script>
+
+  </body>
+</html>
